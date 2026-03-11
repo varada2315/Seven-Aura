@@ -1,8 +1,19 @@
 import { motion } from "framer-motion";
+import heroBg from "@/assets/images/hero-bg.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-chakra-gradient">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroBg}
+          alt="Chakra gradient background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+
       {/* Abstract Chakra Glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#6A0DAD]/20 rounded-full blur-[100px] animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#2E8B57]/20 rounded-full blur-[100px] animate-pulse delay-1000"></div>
@@ -29,12 +40,12 @@ export default function Hero() {
           <span className="inline-block py-1.5 px-4 rounded-full bg-white/40 text-[#4B0082] text-sm font-medium tracking-wider uppercase backdrop-blur-sm mb-4">
             Welcome to Seven Aura Yoga
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-[#4B0082] leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-tight drop-shadow-lg">
             Align Your Body,<br />
             Awaken Your Mind,<br />
             Ascend Your Life
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/95 font-light max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             Holistic yoga programs designed to improve strength, flexibility, focus, and inner balance for children, adults, and organizations.
           </p>
           <div className="pt-8">
@@ -42,7 +53,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="inline-block px-8 py-4 bg-[#4B0082] text-white rounded-full text-lg font-medium hover:bg-[#6A0DAD] transition-colors shadow-lg shadow-[#6A0DAD]/30"
+              className="inline-block px-8 py-4 bg-[#C9A227] text-white rounded-full text-lg font-medium hover:bg-[#b8941f] transition-colors shadow-lg shadow-[#C9A227]/40"
             >
               Contact Us
             </motion.a>
