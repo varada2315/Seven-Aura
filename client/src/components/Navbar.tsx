@@ -66,9 +66,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-[#C9A227] ${
-                  isScrolled ? "text-gray-800" : "text-white"
-                }`}
+                className="text-sm font-medium tracking-wide transition-colors text-[#6A0DAD] hover:text-[#C9A227]"
               >
                 {link.name}
               </a>
@@ -85,10 +83,10 @@ export default function Navbar() {
 
         {/* Mobile Nav Toggle */}
         <button
-          className="md:hidden text-gray-800"
+          className="md:hidden text-[#6A0DAD]"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <X className={isScrolled ? "text-gray-800" : "text-white"} /> : <Menu className={isScrolled ? "text-gray-800" : "text-white"} />}
+          {isOpen ? <X /> : <Menu />}
         </button>
       </div>
 
