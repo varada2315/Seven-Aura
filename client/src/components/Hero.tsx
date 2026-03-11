@@ -1,19 +1,8 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/images/hero-bg.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={heroBg}
-          alt="Chakra gradient background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/30"></div>
-      </div>
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#6A0DAD] via-[#4B0082] to-[#2E8B57]">
       {/* Abstract Chakra Glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#6A0DAD]/20 rounded-full blur-[100px] animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#2E8B57]/20 rounded-full blur-[100px] animate-pulse delay-1000"></div>
